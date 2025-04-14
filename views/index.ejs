@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather</title>
+        <link 
+        rel="stylesheet"
+        href="/styles.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Check the weather before you head out.</h1>
+            <div class="loc-form">
+                <form action="/weather"  method="POST">
+                    <div class="lab"><label>Enter your city</label></div>
+                    <div class="ip-box"><input type="text" name="location"></div>
+                    <div class="sub"><input type="submit" value="Check the weather"></div>
+                    <div class="errmsg">
+                        <%if (locals.error_msg){%>
+                            <%=error_msg%>
+                        <%}%>
+                    </div>
+                </form>
+            </div>
+    </body>
+</html>
